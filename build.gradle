@@ -1,0 +1,29 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+war.archiveName='ROOTBack.war'
+
+apply from :'./gradle/lib.gradle'
+apply from :'./gradle/profile.gradle'
+
+buildDir = 'build'
+
+//자바 버젼
+sourceCompatibility = versions.jdk
+targetCompatibility = versions.jdk
+
+//UTF-8
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+//초기 경로 디렉터리 생성
+task initSrc << {
+    project.sourceSets*.allSource.srcDirTrees.flatten().dir.each { dir ->
+        dir.mkdirs()
+    }
+}
