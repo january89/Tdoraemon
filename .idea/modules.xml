@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tdoraemon.iml" filepath="$PROJECT_DIR$/.idea/modules/Tdoraemon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tdoraemon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Tdoraemon_main.iml" group="Tdoraemon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tdoraemon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Tdoraemon_test.iml" group="Tdoraemon" />
     </modules>
   </component>
 </project>
