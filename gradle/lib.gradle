@@ -7,7 +7,7 @@ ext{
             springdatajpa:'1.10.1.RELEASE',
             hikariCP: '2.4.6',
             h2:'1.4.192',
-            mysqldriver:'5.1.38',
+            mysqldriver:'6.0.2',
             ehcacheCore:'2.6.11',
             sitemesh:'3.0.1',
             junit:'4.12',
@@ -21,7 +21,10 @@ ext{
             commonsIo: '2.4',
             jackson: '2.8.0.rc1',
             commonslang: '3.4',
-            bootstrap : '4.0.0-alpha.2'
+            bootstrap : '4.0.0-alpha.2',
+            servlet:'4.0.0-b01',
+            jstl:'1.2'
+
     ]
 }
 
@@ -45,11 +48,12 @@ dependencies {
     compile("org.hibernate:hibernate-validator:${versions.hibernateValidator}")
 
     // jspPage
-    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
-    runtime "javax.servlet:jstl:1.2"
+    providedCompile("javax.servlet:javax.servlet-api:${versions.servlet}")
+    runtime("javax.servlet:jstl:${versions.jstl}")
 
     // db
     compile("com.zaxxer:HikariCP:${versions.hikariCP}")
+    compile("mysql:mysql-connector-java:${versions.mysqldriver}")
     compile("com.h2database:h2:${versions.h2}")
 
     // util

@@ -12,6 +12,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 class PersistenceContext {
+
     private static final String[] PROPERTY_PACKAGES_TO_SCAN = {
     };
 
@@ -32,10 +33,12 @@ class PersistenceContext {
     @Bean
     public DataSource dataSource() {
         HikariDataSource dataSource = new HikariDataSource();
+
         dataSource.setDriverClassName(env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER));
         dataSource.setJdbcUrl(env.getRequiredProperty(PROPERTY_NAME_DATABASE_URL));
         dataSource.setUsername(env.getRequiredProperty(PROPERTY_NAME_DATABASE_USERNAME));
         dataSource.setPassword(env.getRequiredProperty(PROPERTY_NAME_DATABASE_PASSWORD));
+
         return dataSource;
     }
 
