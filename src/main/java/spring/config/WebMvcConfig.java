@@ -18,6 +18,7 @@ import java.util.List;
 
 @Configuration
 @ComponentScan(basePackages = {
+        "spring.main.web"
 })
 @EnableWebMvc
 public class WebMvcConfig extends WebMvcConfigurerAdapter{
