@@ -1,14 +1,12 @@
 package spring.main.web;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-
+import static java.lang.System.out;
 
 /**
  * Created by Park Tae Hwan on 2016-06-14.
@@ -17,23 +15,12 @@ import java.util.Locale;
 @Controller
 public class mainController {
 
-    @RequestMapping("/")
-    public String home(Locale locale, Model model) {
+    private static final Logger log = LoggerFactory.getLogger(mainController.class);
 
-        Date date = new Date();
-        DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-        String formattedDate = dateFormat.format(date);
-
-        model.addAttribute("serverTime", formattedDate );
-
+    @RequestMapping("/home")
+    public String index(){
+        out.println("들어옴!?");
         return "home";
     }
-
-//    @RequestMapping("/index")
-//    public String index(){
-//        log.debug("hello world");
-//        return "index";
-//    }
 
 }

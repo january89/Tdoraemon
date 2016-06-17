@@ -27,8 +27,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        // http://stackoverflow.com/questions/29394493/spring-mvc-configuration-enable
-        // <mvc:default-servlet-handler/>
         configurer.enable();
     }
 

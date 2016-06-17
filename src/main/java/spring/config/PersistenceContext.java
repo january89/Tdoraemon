@@ -49,7 +49,6 @@ class PersistenceContext {
         return transactionManager;
     }
 
-
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
